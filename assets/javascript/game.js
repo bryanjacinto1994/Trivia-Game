@@ -80,3 +80,12 @@ var questionSeven =
 }
 
 var triviaQuestions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
+
+function timeConverter(t){
+    var minutes = Math.floor(t/60);
+    var seconds = t - (minutes * 60);
+    if (seconds < 10){
+        seconds = "0" + seconds;
+    }
+    return seconds;
+};
