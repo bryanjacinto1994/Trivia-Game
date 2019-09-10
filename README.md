@@ -108,7 +108,6 @@ function timeConverter(t) {
     }
 
     function showNextQuestion() {
-        quizNum += 1;
 
         if (quizNum === (triviaQuestions.length - 1)) {
             clearInterval(intervalId);
