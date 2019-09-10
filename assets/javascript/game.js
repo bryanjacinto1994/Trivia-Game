@@ -101,10 +101,10 @@ $(document).ready(function () {
         var translateTime = timeConverter(time);
         $("#time").html(translateTime + " seconds");
         if (time === 0) {
-            $("#results").html("Times up! You are too slow to be a Ninja!")
+            $("#results").html("Times up! You are too slow to be a Ninja! <br> <img src='https://media1.tenor.com/images/9df512e6a2bce6011493459ccf0cde56/tenor.gif?itemid=5283911'>")
             quizNum += 1;
             clearInterval(intervalId);
-            setTimeout(showNextQuestion, 1500);
+            setTimeout(showNextQuestion, 5000);
             setTimeout(timeStart, 1500);
         }
     }
@@ -115,7 +115,7 @@ $(document).ready(function () {
     }
 
     function showNextQuestion() {
-        
+        quizNum += 1;
 
         if (quizNum === (triviaQuestions.length - 1)) {
             clearInterval(intervalId);
