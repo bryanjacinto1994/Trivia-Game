@@ -1,6 +1,4 @@
-*{
-    text-align: center;
-}
+
 body{
     background-image: url("../images/background.jpg");
     position: fixed;
@@ -20,12 +18,32 @@ body{
     text-align: center;
     color: white;
     font-family: 'Chilanka', cursive;
+    font-size: 35px;
 }
 
 .main-container{
     position: relative;
-    top: 40%;
+    top: 25%;
     font-family: 'Chilanka', cursive;
+    background: rgba(100,100,100,0.8);
 }
 
-#title
+#title{
+    font-size: 50px;
+}
+
+#question{
+    background: rgba(120, 160,140,0.5);
+}
+
+#results{
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#answer:hover,
+.option:hover{
+    border: 2px solid white;
+    background: rgba(140, 180,160,0.8);
+    border-radius: 40px;
+}
