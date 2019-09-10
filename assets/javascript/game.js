@@ -89,3 +89,9 @@ function timeConverter(t){
     }
     return seconds;
 };
+
+function timeStart(){
+    time = 15;
+    clearInterval(intervalId);
+    intervalId = setInterval(timesUp, 1000);
+}
