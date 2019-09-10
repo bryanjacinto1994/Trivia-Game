@@ -144,6 +144,7 @@ $(document).ready(function () {
 
     function showWrongAnswer() {
         $(".option").on("click", function () {
+            
             $("#results").html('Incorrect! you are not worth to be a Ninja! <br> <img src ="./assets/images/wrong.gif">')
             clearInterval(intervalId);
             setTimeout(showNextQuestion, 1500);
