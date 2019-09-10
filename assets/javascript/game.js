@@ -150,3 +150,17 @@ function showWrongAnswer(){
         setTimeout(showNextQuestion, 1500);
     })
 }
+
+function resetGame(){
+    $("#restart").on("click", function(){
+        correctAnswers = 0;
+        wrongAnswers = 0;
+        quizNum = 0;
+        displayQuiz();
+        clearInterval(intervalId);
+        timeStart();
+        showCorrectAnswer();
+        showWrongAnswer();
+        resetGame();
+    })
+}
