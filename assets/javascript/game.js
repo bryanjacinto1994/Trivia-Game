@@ -78,3 +78,5 @@ var questionSeven =
     choice3:'',
     choice4:'',
 }
+
+var triviaQuestions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
