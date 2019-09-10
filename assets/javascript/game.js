@@ -162,7 +162,6 @@ $(document).ready(function () {
     function resetGame() {
         $("#restart").on("click", function () {
             correctAnswers = 0;
-            wrongAnswers = 0;
             quizNum = 0;
             displayQuiz(triviaQuestions[quizNum]);
             clearInterval(intervalId);
