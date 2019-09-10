@@ -13,10 +13,19 @@ body{
 .container{
     text-align: center;
     color: white;
+    font-family: 'Chilanka', cursive;
 }
 
 .sub-container{
     text-align: center;
     color: white;
+    font-family: 'Chilanka', cursive;
 }
 
+.main-container{
+    position: relative;
+    top: 40%;
+    font-family: 'Chilanka', cursive;
+}
+
+#title

@@ -10,8 +10,7 @@
 //Create a function that will show wrong answer with image and move on to the next question.
 //Create a function that will reset the game.
 //Create a start button function that will execute the game.
-$(document).ready(function () {
-
+ 
     var time = 15;
     var quizNum = 0;
     var correctAnswers = 0;
@@ -66,7 +65,7 @@ $(document).ready(function () {
     {
         question: '<div id="question">In what year was the Naruto Manga published?</div>',
         choice1: '<div class="option">1994</div>',
-        choice2: 'div id="answer">1997</div>',
+        choice2: '<div id="answer">1997</div>',
         choice3: '<div class="option">2001</div>',
         choice4: '<div class="option">2007</div>',
     }
@@ -74,6 +73,7 @@ $(document).ready(function () {
     var questionSeven =
     {
         question: '<div id="restart">Restart Quiz?</div>',
+        choice1: '',
         choice2: '',
         choice3: '',
         choice4: '',
@@ -134,7 +134,7 @@ $(document).ready(function () {
     }
 
     function showCorrectAnswer() {
-        $("answer").on("click", function () {
+        $("#answer").on("click", function () {
             $("#results").html('You are a Ninja! <br> <img src="./assets/images/correct.gif">')
             correctAnswers += 1;
             clearInterval(intervalId);
@@ -143,22 +143,13 @@ $(document).ready(function () {
     }
 
     function showWrongAnswer() {
-        $(".choice").on("click", function () {
-            $("#results").html('Incorrect! you are not worth to be a Ninja! <br> </img src ="./assets/images/wrong.gif">')
+        $(".option").on("click", function () {
+            $("#results").html('Incorrect! you are not worth to be a Ninja! <br> <img src ="./assets/images/wrong.gif">')
             quizNum += 1;
             clearInterval(intervalId);
             setTimeout(showNextQuestion, 1500);
         })
     }
-
-    //This starts the game once button is clicked.
-    $("#startGameButton").on("click", function () {
-        displayQuiz(triviaQuestions[quizNum]);
-        timeStart();
-        showCorrectAnswer();
-        showWrongAnswer();
-        resetGame();
-    })
 
     function resetGame() {
         $("#restart").on("click", function () {
@@ -173,5 +164,14 @@ $(document).ready(function () {
             resetGame();
         })
     }
-
+    $(document).ready(function () {
+        
+      //This starts the game once button is clicked.
+      $("#startGameButton").on("click", function () {
+        displayQuiz(triviaQuestions[quizNum]);
+        timeStart();
+        showCorrectAnswer();
+        showWrongAnswer();
+        resetGame();
+    })
 })
