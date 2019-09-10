@@ -107,5 +107,9 @@ function timesUp(){
         setTimeout(showNextQuestion, 1500);
         setTimeout(timeStart, 1500);
     }
+}
 
+function displayQuiz(display){
+    $("#results").html(display.question + display.choice1 + display.choice2 + display.choice3 + display.choice4);
+    $("#correctNum").html(correctAnswers + '/6 Correct Answers')
 }
