@@ -95,3 +95,17 @@ function timeStart(){
     clearInterval(intervalId);
     intervalId = setInterval(timesUp, 1000);
 }
+
+function timesUp(){
+    time -=1;
+    var translateTime = timeConverter(time);
+    $("#time").html(translateTime + " seconds");
+    if (time === 0){
+        $("#results").html("Times up! You are too slow to be a Ninja!")
+        quizNum += 1;
+        clearInterval(intervalId);
+        setTimeout(showNextQuestion, 1500);
+        setTimeout(timeStart, 1500);
+    }
+
+}
