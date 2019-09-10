@@ -19,62 +19,61 @@ $(document).ready(function () {
 
     var questionOne =
     {
-        question: $("#question").html("What is the name of the Sensei that taught Naruto how to use 'Rasengan'?"),
-        choice1: $(".option").html("Kakashi"),
-        choice2: $("#answer").html("Jiraya"),
-        choice3: $(".option").html("Iruka"),
-        choice4: $(".option").html("Minato"),
+        question: '<div id="question">What is the name of the Sensei that taught Naruto how to use "Rasengan"?</div>',
+        choice1: '<div class="option">Kakashi</div>',
+        choice2: '<div id="answer">Jiraya</div>',
+        choice3: '<div class="option">Iruka</div>',
+        choice4: '<div class="option">Minato</div>',
     }
 
     var questionTwo =
     {
-        question: $("#question").html("Who did Naruto end up dating?"),
-        choice1: $(".option").html("Tsunade"),
-        choice2: $(".option").html("Sakura"),
-        choice3: $(".option").html("Tenten"),
-        choice4: $("#answer").html("Hinata"),
+        question: '<div id="question">Who did Naruto end up dating?</div>',
+        choice1: '<div class="option">Tsunade</div>',
+        choice2: '<div class="option">Sakura</div>',
+        choice3: '<div class="option">Tenten</div>',
+        choice4: '<div id="answer">Hinata</div>',
     }
 
     var questionThree =
     {
-        question: $("#question").html("What is the name of the character that eats alot to enhance his powers?"),
-        choice1: $("#answer").html("Choji"),
-        choice2: $(".option").html("Naruto"),
-        choice3: $(".option").html("Itachi"),
-        choice4: $(".option").html("Boruto"),
+        question: '<div id="question">What is the name of the character that eats alot to enhance his powers?</div>',
+        choice1: '<div id="answer">Choji</div>',
+        choice2: '<div class="option">Naruto</div>',
+        choice3: '<div class="option">Itachi</div>',
+        choice4: '<div class="option">Boruto</div>',
     }
 
     var questionFour =
     {
-        question: $("#question").html("Which character resembles the same features as the famous real-life martial artist, 'Bruce Lee'?"),
-        choice1: $(".option").html("Guy"),
-        choice2: $(".option").html("Sasuke"),
-        choice3: $("#answer").html("Rock"),
-        choice4: $(".option").html("Gaara"),
+        question: '<div id="question">Which character resembles the same features as the famous real-life martial artist, "Bruce Lee"?</div>',
+        choice1: '<div class="option">Guy</div>',
+        choice2: '<div class="option">Sasuke</div>',
+        choice3: '<div id="answer">Rock</div>',
+        choice4: '<div class="option">Gaara</div>',
     }
 
     var questionFive =
     {
-        question: $("#question").html("What is the name of the Nine-Tailed Fox that is sealed in Naruto's body?"),
-        choice1: $(".option").html("Shukaku"),
-        choice2: $("#answer").html("Kurama"),
-        choice3: $(".option").html("Isobu"),
-        choice4: $(".option").html("Matatabi"),
+        question: '<div id="question">What is the name of the Nine-Tailed Fox that is sealed in Narutos body?</div>',
+        choice1: '<div class="option">Shukaku</div>',
+        choice2: '<div id="answer">Kurama</div>',
+        choice3: '<div class="option">Isobu</div>',
+        choice4: '<div class="option">Matatabi</div>',
     }
 
     var questionSix =
     {
-        question: $("#question").html("In what year was the Naruto Manga published?"),
-        choice1: $(".option").html("1994"),
-        choice2: $("#answer").html("1997"),
-        choice3: $(".option").html("2001"),
-        choice4: $(".option").html("2007"),
+        question: '<div id="question">In what year was the Naruto Manga published?</div>',
+        choice1: '<div class="option">1994</div>',
+        choice2: 'div id="answer">1997</div>',
+        choice3: '<div class="option">2001</div>',
+        choice4: '<div class="option">2007</div>',
     }
 
     var questionSeven =
     {
-        question: $("#restart").html("Restart Quiz?"),
-        choice1: '',
+        question: '<div id="restart">Restart Quiz?</div>',
         choice2: '',
         choice3: '',
         choice4: '',
