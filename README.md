@@ -136,6 +136,7 @@ function timeConverter(t) {
 
     function showWrongAnswer() {
         $(".option").on("click", function () {
+            quizNum +=1;
             $("#results").html('Incorrect! you are not worth to be a Ninja! <br> <img src ="./assets/images/wrong.gif">')
             clearInterval(intervalId);
             setTimeout(showNextQuestion, 1500);
