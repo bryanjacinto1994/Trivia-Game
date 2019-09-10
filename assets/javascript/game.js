@@ -10,3 +10,9 @@
 //Create a function that will show wrong answer with image and move on to the next question.
 //Create a function that will reset the game.
 //Create a start button function that will execute the game.
+
+var time = 15;
+var quizNum = 0;
+var correctAnswers = 0;
+var intervalId;
+
