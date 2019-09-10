@@ -1,5 +1,8 @@
 # Trivia-Game
 ### Links: 
+https://bryanjacinto1994.github.io/Trivia-Game/
+<br>
+https://github.com/bryanjacinto1994/Trivia-Game
 
 
 ## Images

@@ -8,8 +8,8 @@
 //Create a function that will increment correct answers by 1 and shows a image that you are correct.
 //Hint: Make sure to use clearInterval and setTimeout to go to next question.
 //Create a function that will show wrong answer with image and move on to the next question.
-//Create a function that will reset the game.
 //Create a start button function that will execute the game.
+//Create a function that will reset the game.
 $(document).ready(function () {
     var time = 15;
     var quizNum = 0;
