@@ -19,18 +19,18 @@ var intervalId;
 var questionOne =
 {
     question: $("#question").html("What is the name of the Sensei that taught Naruto how to use 'Rasengan'?"),
-    choice1:$("#choice").html("Kakashi"),
+    choice1:$(".option").html("Kakashi"),
     choice2:$("#answer").html("Jiraya"),
-    choice3:$("#choice").html("Iruka"),
-    choice4:$("#choice").html("Minato"),
+    choice3:$(".option").html("Iruka"),
+    choice4:$(".option").html("Minato"),
 }
 
 var questionTwo =
 {
     question: $("#question").html("Who did Naruto end up dating?"),
-    choice1:$("#choice").html("Tsunade"),
-    choice2:$("#choice").html("Sakura"),
-    choice3:$("#choice").html("Tenten"),
+    choice1:$(".option").html("Tsunade"),
+    choice2:$(".option").html("Sakura"),
+    choice3:$(".option").html("Tenten"),
     choice4:$("#answer").html("Hinata"),
 }
 
@@ -38,36 +38,36 @@ var questionThree =
 {
     question: $("#question").html("What is the name of the character that eats alot to enhance his powers?"),
     choice1:$("#answer").html("Choji"),
-    choice2:$("#choice").html("Naruto"),
-    choice3:$("#choice").html("Itachi"),
-    choice4:$("#choice").html("Boruto"),
+    choice2:$(".option").html("Naruto"),
+    choice3:$(".option").html("Itachi"),
+    choice4:$(".option").html("Boruto"),
 }
 
 var questionFour = 
 {
     question: $("#question").html("Which character resembles the same features as the famous real-life martial artist, 'Bruce Lee'?"),
-    choice1:$("#choice").html("Guy"),
-    choice2:$("#choice").html("Sasuke"),
+    choice1:$(".option").html("Guy"),
+    choice2:$(".option").html("Sasuke"),
     choice3:$("#answer").html("Rock"),
-    choice4:$("#choice").html("Gaara"),
+    choice4:$(".option").html("Gaara"),
 }
 
 var questionFive = 
 {
     question: $("#question").html("What is the name of the Nine-Tailed Fox that is sealed in Naruto's body?"),
-    choice1:$("#choice").html("Shukaku"),
+    choice1:$(".option").html("Shukaku"),
     choice2:$("#answer").html("Kurama"),
-    choice3:$("#choice").html("Isobu"),
-    choice4:$("#choice").html("Matatabi"),
+    choice3:$(".option").html("Isobu"),
+    choice4:$(".option").html("Matatabi"),
 }
 
 var questionSix =
 {
     question: $("#question").html("In what year was the Naruto Manga published?"),
-    choice1:$("#choice").html("1994"),
+    choice1:$(".option").html("1994"),
     choice2:$("#answer").html("1997"),
-    choice3:$("#choice").html("2001"),
-    choice4:$("#choice").html("2007"),
+    choice3:$(".option").html("2001"),
+    choice4:$(".option").html("2007"),
 }
 
 var questionSeven =
@@ -112,4 +112,41 @@ function timesUp(){
 function displayQuiz(display){
     $("#results").html(display.question + display.choice1 + display.choice2 + display.choice3 + display.choice4);
     $("#correctNum").html(correctAnswers + '/6 Correct Answers')
+}
+
+function showNextQuestion(){
+    quizNum +=1;
+
+    if (quizNum === (triviaQuestions.length - 1)){
+        clearInterval(intervalId);
+        displayQuiz(triviaQuestions[quizNum]);
+        showCorrectAnswer();
+        showWrongAnswer();
+        resetGame();
+    }
+    else{
+        timeStart();
+        displayQuiz(triviaQuestions[quizNum]);
+        showCorrectAnswer();
+        showWrongAnswer();
+        resetGame();
+    }
+}
+
+function showCorrectAnswer(){
+    $("answer").on("click", function (){
+        $("#results").html('You are a Ninja! <br> <img src="./assets/images/correct.gif">')
+        correctAnswers += 1;
+        clearInterval(intervalId);
+        setTimeout(showNextQuestion, 1500);
+    });
+}
+
+function showWrongAnswer(){
+    $(".choice").on("click", function(){
+        $("#results").html('Incorrect! you are not worth to be a Ninja! <br> </img src ="./assets/images/wrong.gif">')
+        quizNum += 1;
+        clearInterval(intervalId);
+        setTimeout(showNextQuestion, 1500);
+    })
 }
